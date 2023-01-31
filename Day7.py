@@ -70,7 +70,7 @@ stages = ['''
 
 print(f"Welcome to hangman game\n{logo}")
 import random
-from replit import clear
+import os
 
 chosen_word = random.choice(word_list)
 
@@ -85,7 +85,7 @@ lives = 6
 while not end:
   guess = input("Guess a letter: ").lower()
 
-  clear()
+  os.system("cls")
 
   if guess in guesslist:
     print(f"You have already guessed {guess}")
